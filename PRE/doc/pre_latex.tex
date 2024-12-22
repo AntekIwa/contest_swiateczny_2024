@@ -1,0 +1,116 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{multicol}
+\geometry{top=0.5in, bottom=0.8in, left=0.8in, right=0.8in}
+
+% Customizable parameters
+% Wstaw pełny tytuł zadania
+\newcommand{\tasktitle}{Świąteczne Prezenty}
+% Wstaw skrócony tytuł zadania
+\newcommand{\taskshort}{PRE}
+% Wstaw informacje o konkursie
+\newcommand{\contestinfo}{Konkurs Świąteczny 2024 - Grupa Początkująca.}
+% Wstaw limit pamięci
+\newcommand{\memorylimit}{10 MB}
+% Wstaw dane przykładowe wejścia
+\newcommand{\exampleinput}{3 2\\1 4 7\\+ 5\\?}
+% Wstaw dane przykładowe wyjścia
+\newcommand{\exampleoutput}{6\\6}
+% Wstaw wyjaśnienie przykładu
+\newcommand{\explanation}{Początkowy stos to [1, 4, 7]. Po operacji + 5, stos staje się [1, 4, 7, 5]. Operacja ? zwraca różnicę między maksymalną a minimalną wartością: $7 - 1 = 6$.}
+% Wstaw tabelę podzadań
+\newcommand{\subtasktable}{% 
+\begin{tabular}{|c|c|c|}
+\hline
+Podzadanie & Ograniczenia & Punkty \\
+\hline
+1 & $q, n \leq 10$ & 10 \\
+2 & $q, n \leq 1000$ & 30 \\
+3 & $q, n \leq 100000$ & 60 \\
+\hline
+\end{tabular}}
+
+\begin{document}
+
+% Nagłówek zadania
+\noindent\textbf{\LARGE Zadanie: \taskshort} \\
+\textbf{\Large \tasktitle} \\
+\rule{\textwidth}{0.4pt} \\
+\small \contestinfo \
+\textbf{Dostępna pamięć: \memorylimit.}
+
+% Wstaw obrazek
+\begin{center}
+\includegraphics[width=0.6\textwidth]{zdj.png} % Zmień "zdj.png" na nazwę pliku z obrazkiem
+\end{center}
+
+% Treść zadania
+\noindent Bajtek, robiąc przerwę w świątecznych porządkach, zajrzał pod choinkę i zauważył stos prezentów o różnych wartościach. Z czasem zaczęły pojawiać się nowe paczki, więc postanowił na bieżąco analizować ich stan.
+
+Każdy prezent miał wartość liczbową, a Bajtek chciał wiedzieć dwie rzeczy:
+\begin{itemize}
+    \item Jak zmieni się stos, gdy pojawi się nowy prezent.
+    \item Jaki jest poziom niesprawiedliwości, czyli różnica między największym a najmniejszym prezentem.
+\end{itemize}
+Prezentów przybywało coraz więcej, a Bajtek potrzebuje pomocy, by nadążyć za zmianami. Pomóż mu obsłużyć $q$ zapytań, uwzględniając początkowy stan stosu.
+
+% Sekcja wejścia
+\section*{Wejście}
+Pierwszy wiersz wejścia zawiera dwie liczby całkowite $n$ i $q$ ($1 \leq n, q \leq 100\,000$) oznaczające początkową liczbę prezentów w stosie oraz liczbę zapytań.
+
+Drugi wiersz zawiera $n$ liczb całkowitych $a_1, a_2, \dots, a_n$ ($1 \leq a_i \leq 10^9$) – początkowe wartości prezentów w stosie.
+
+Dodatkowo, na początku należy wypisać poziom niesprawiedliwości dla początkowego stanu stosu.
+
+Kolejne $q$ wierszy opisują zapytania w jednej z dwóch form:
+\begin{itemize}
+    \item \texttt{+ x} – dodaj nowy prezent o wartości $x$ ($1 \leq x \leq 10^9$),
+    \item \texttt{?} – wypisz różnicę między największą a najmniejszą wartością w stosie.
+\end{itemize}
+
+% Sekcja wyjścia
+\section*{Wyjście}
+Dla każdego zapytania typu \texttt{?} wypisz w osobnym wierszu jedno całkowite liczba – różnicę między największą a najmniejszą wartością w stosie.
+\newpage
+% Sekcja przykładów
+\section*{Przykład}
+\begin{multicols}{2}
+\noindent\textbf{Wejście:} \\
+\exampleinput
+
+\columnbreak
+
+\noindent\textbf{Wyjście:} \\
+\exampleoutput
+\end{multicols}
+
+\noindent Wyjaśnienie: \explanation
+
+% Sekcja oceniania
+\section*{Ocenianie}
+Zestaw testów dzieli się na następujące podzadania:
+\begin{center}
+\subtasktable
+\end{center}
+
+% Stopka
+\vspace*{\fill}
+\noindent\rule{\textwidth}{0.4pt} \\
+\small \textbf{Autor:} Antoni Iwanowski \hfill \textbf{VIII LO im. Władysława IV w Warszawie}
+
+% Komentarze:
+% W polu \tasktitle wpisz pełny tytuł zadania.
+% W polu \taskshort wpisz skrócony tytuł zadania.
+% W polu \contestinfo wpisz informacje o konkursie.
+% W polu \memorylimit wpisz limit pamięci.
+% W polach \exampleinput i \exampleoutput wpisz dane przykładowe wejścia i wyjścia.
+% W polu \explanation wpisz wyjaśnienie przykładu.
+% W polu \subtasktable wpisz tabelę z podzadaniami, ich ograniczeniami i punktami.
+% W stopce wstaw autora i nazwę szkoły.
+\end{document}
