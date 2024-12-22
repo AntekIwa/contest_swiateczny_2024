@@ -10,7 +10,7 @@ int v;
 int ans = 0;
 vector <int> h;
 
-int32_t sumuj(int H) {
+long long sumuj(int H) {
     int suma = 0;
     for (int i = 0; i < n; i++) suma += min(h[i], H);
     return suma;
