@@ -1,6 +1,6 @@
 /*
   22.12.2024
-  rozwiazanie O(n) - Antoni Iwanowski
+  Rozwiazanie O(n) - Antoni Iwanowski
 */
 
 #include<bits/stdc++.h>
