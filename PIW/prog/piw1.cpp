@@ -1,15 +1,11 @@
-/*
-  22.12.2024
-  Rozwiazanie O(n log max(h[i])) - Filip Nowak
-*/
-
 #include <bits/stdc++.h>
 #define nl endl
 #define pb push_back
 #define ll long long
 using namespace std;
 const int maxn = 1e5+5;
-int n, v;
+int n;
+ll v;
 // n log n
 int ans = 0;
 vector <int> h;
