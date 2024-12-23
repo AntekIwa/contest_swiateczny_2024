@@ -1,0 +1,99 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{multicol}
+\geometry{top=0.5in, bottom=0.8in, left=0.8in, right=0.8in}
+
+% Customizable parameters
+% Wstaw pełny tytuł zadania
+\newcommand{\tasktitle}{Kominy}
+% Wstaw skrócony tytuł zadania
+\newcommand{\taskshort}{KOM}
+% Wstaw informacje o konkursie
+\newcommand{\contestinfo}{Konkurs Świąteczny 2024 - Grupa Początkująca.}
+% Wstaw limit pamięci
+\newcommand{\memorylimit}{512 MB}
+% Wstaw dane przykładowe wejścia
+\newcommand{\exampleinput}{\\4 4 3
+\\1 2 0 4
+\\2 -1 -1 5
+\\3 2 0 6
+\\4 5 6 7}
+% Wstaw dane przykładowe wyjścia
+\newcommand{\exampleoutput}{\\4}
+% Wstaw wyjaśnienie przykładu
+\newcommand{\explanation}{Mikołaj zaczyna na polu \( g_{1,1} = 1 \). Następnie przemieszcza się, wykorzystując linę o maksymalnej długości 4, aby dotrzeć do mety przy \( g_{4,4} = 7 \).}
+% Wstaw imię i nazwisko autora
+\newcommand{\authorinfo}{Antoni Iwanowski}
+% Wstaw nazwę szkoły
+\newcommand{\schoolinfo}{VIII LO im. Władysława IV w Warszawie}
+% Wstaw tabelę podzadań
+\newcommand{\subtasktable}{% 
+\begin{tabular}{|c|c|c|}
+\hline
+Podzadanie & Ograniczenia & Punkty \\
+\hline
+1 & $n, m \leq 10$ & 5 \\
+2 & $n, m \leq 100$ & 35 \\
+3 & $n, m \leq 800$ & 60 \\
+\hline
+\end{tabular}}
+
+\begin{document}
+
+% Nag\'lowek zadania
+\noindent\textbf{\LARGE Zadanie: \taskshort} \\
+\textbf{\Large \tasktitle} \\
+\rule{\textwidth}{0.4pt} \\
+\small \contestinfo \textbf{ Dostępna pamięć: \memorylimit.}
+
+% Dodanie obrazu
+\begin{center}
+\includegraphics[width=0.6\textwidth]{zdj.jpg}
+\end{center}
+
+% Tre\'s\'c zadania
+\section*{Tre\'s\'c zadania}
+\noindent\normalsize
+Święty Mikołaj wyrusza w swoją świąteczną podróż po Laponii, by dostarczyć prezenty dzieciom. Jego trasa prowadzi przez siatkę \( n \times m \), gdzie każda komórka reprezentuje komin o określonej trudności \( g_{i,j} \).
+
+Mikołaj musi dotrzeć z pola \((1, 1)\) (start) na pole \((n, m)\) (meta), wybierając odpowiednią trasę i odpowiednio zarządzając swoją energią. W trakcie podróży może natrafić na różne sytuacje: jeśli przemieszcza się na pole o większej wysokości, musi użyć liny, której maksymalna długość \( M \) ogranicza różnicę wysokości, jaką może pokonać. Za każdy taki manewr zużywa 1 jednostkę energii. Gdy Mikołaj trafi na pole niższe lub równe wysokości, nie traci energii. Napotkane pola z magicznym napojem przywracają jego energię do pełnej wartości \( k \), natomiast pola oznaczone wartością \( -1 \) są niedostępne i nie może przez nie przejść. Mikołaj może poruszać się jedynie w prawo lub w dół.
+
+Jeżeli nie da się dotrzeć do mety, należy wypisać słowo \texttt{NIE}.
+
+\section*{Wejście}
+Na wejściu znajdują się trzy liczby całkowite \( n, m, k \) ($1 \leq n, m \leq 1000$, \( 1 \leq k \leq 10 \)), oznaczające wymiary planszy oraz maksymalną liczbę jednostek energii. Następnie podana jest siatka \( g_{i,j} \) o wymiarach \( n \times m \). Wartości \( g_{i,j} \) mogą być dodatnie (wysokość komina), równe 0 (pole zawierające magiczny napój) lub równe \( -1 \) (pole niedostępne).
+
+\section*{Wyjście}
+Na wyjściu należy wypisać jedną liczbę całkowitą — minimalną długość liny \( M \), która pozwala Mikołajowi dotrzeć z \( (1, 1) \) na \( (n, m) \). Jeśli nie da się dotrzeć do mety, należy wypisać słowo \texttt{NIE}.
+\newpage
+\section*{Przykład}
+\vspace{-0.5cm}
+\begin{multicols}{2}
+\noindent\textbf{Wejście:}
+\exampleinput
+
+\columnbreak
+
+\noindent\textbf{Wyjście:}
+\exampleoutput
+\end{multicols}
+
+\noindent Wyjaśnienie: \explanation
+
+\section*{Ocenianie}
+Zestaw testów dzieli się na następujące podzadania:
+\begin{center}
+\subtasktable
+\end{center}
+
+% Stopka
+\vspace*{\fill}
+\noindent \rule{\textwidth}{0.4pt} \\
+\textbf{Autor:} \authorinfo  \hfill \textbf{\schoolinfo} \\
+\end{document}
