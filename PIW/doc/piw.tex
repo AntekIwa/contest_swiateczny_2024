@@ -23,7 +23,7 @@
 % Wstaw dane przykładowe wyjścia
 \newcommand{\exampleoutput}{5}
 % Wstaw wyjaśnienie przykładu
-\newcommand{\explanation}{Dla H=5, suma objętości to 4+5+5+3+5=22, co spełnia warunek. Łatwo empirycznie sprawdzić, że dla wartości H=4, warunek nie zostanie już spełniony, bo suma wówczas wyniesie 19.}
+\newcommand{\explanation}{Dla $H$=5, suma objętości to 4+5+5+3+5=22, co spełnia warunek. Łatwo empirycznie sprawdzić, że dla wartości $H$=4, warunek nie zostanie już spełniony, bo suma wówczas wyniesie 19.}
 % Wstaw tabelę podzadań
 \newcommand{\subtasktable}{% 
 \begin{tabular}{|c|c|c|}
@@ -47,20 +47,20 @@ Podzadanie & Ograniczenia & Punkty \\
 
 % Wstaw obrazek
 \begin{center}
-\includegraphics[width=0.6\textwidth]{elfy_zadanie_piwo.png} % Zmień "zdj.png" na nazwę pliku z obrazkiem
+\includegraphics[width=0.6\textwidth]{elfy_zadanie_piwo.jpg} % Zmień "zdj.png" na nazwę pliku z obrazkiem
 \end{center}
 
 % Treść zadania
-\noindent W browarni Świętego Mikołaja przechowywane jest n beczek z piwem o podstawie o polu 1. Beczki są ustawione w rzędzie i każda z nich ma określoną wysokość h[i]. Drużyna transportowa natrafiła jednak na pewien problem. Otóż im większe sanie, tym większy koszt dostawy, zatem elfy naturalnie chcą użyć najniższych możliwych sań do transportu. Aby zmieścić daną beczkę na saniach, jej wysokość nie może przekraczać wysokości sań H. Dodatkowo, elfy muszą zaspokoić niemałe zapotrzebowanie na napoje wyskokowe, które wynosi V.\\\\Wyznacz minimalną wartość H, dla której elfy będą w stanie zaspokoić zapotrzebowanie V.
+\noindent W browarze Świętego Mikołaja przechowywane jest $n$ beczek z piwem o podstawie o polu 1. Beczki są ustawione w rzędzie i każda z nich ma określoną wysokość $h[i]$. Drużyna transportowa natrafiła jednak na pewien problem. Otóż im większe sanie, tym większy koszt dostawy, zatem elfy naturalnie chcą użyć najniższych możliwych sań do transportu. Aby zmieścić daną beczkę na saniach, jej wysokość nie może przekraczać wysokości sań $H$, natomiast elfy mogą odpowiednio odciąć beczke od góry, żeby ta mogła się zmieścić (w wyniku tej operacji naturalnie zmienia sie jej objętość). Dodatkowo, elfy muszą zaspokoić niemałe zapotrzebowanie na napoje wyskokowe, które wynosi $V$.\\\\Wyznacz minimalną wartość $H$, dla której elfy będą w stanie zaspokoić zapotrzebowanie $V$.
 
 
 % Sekcja wejścia
 \section*{Wejście}
-Pierwszy wiersz wejścia zawiera dwie liczby całkowite $n$ i $V$ ($1 \leq n \leq 100\,000$), ($1 \leq V \leq \sum h[i]$) oznaczające ilość beczek w browarni oraz zapotrzebowanie na piwo.\\Kolejne $n$ wierszy zawiera po jednej liczbie całkowitej oznaczającej wysokość danej beczki $h[i]$, gdzie ($1 \leq h[i] \leq 10^9$).
+Pierwszy wiersz wejścia zawiera dwie liczby całkowite $n$ i $V$ ($1 \leq n \leq 100\,000$), ($1 \leq V \leq \sum h[i]$) oznaczające ilość beczek w browarze oraz zapotrzebowanie na piwo.\\Kolejne $n$ wierszy zawiera po jednej liczbie całkowitej oznaczającej wysokość danej beczki $h[i]$, gdzie ($1 \leq h[i] \leq 10^9$).
 
 % Sekcja wyjścia
 \section*{Wyjście}
-Wypisz jak najmniejszą wartość H, dla której spełnione jest wymagane zapotrzebowanie.
+Wypisz jak najmniejszą wartość $H$, dla której spełnione jest wymagane zapotrzebowanie.
 \newpage
 % Sekcja przykładów
 \section*{Przykład}
