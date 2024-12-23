@@ -7,7 +7,7 @@
 
 using namespace std;
 
-const int maxn = 8007;
+const int maxn = 807;
 const int inf = 1e9 + 7;
 int dp[maxn][maxn];
 int grid[maxn][maxn];
