@@ -19,7 +19,7 @@
 % Wstaw limit pamięci
 \newcommand{\memorylimit}{512 MB}
 % Wstaw dane przykładowe wejścia
-\newcommand{\exampleinput}{\\4 4 3
+\newcommand{\exampleinput}{\\4 4 4
 \\1 2 0 4
 \\2 -1 -1 5
 \\3 2 0 6
@@ -60,7 +60,7 @@ Podzadanie & Ograniczenia & Punkty \\
 % Tre\'s\'c zadania
 \section*{Tre\'s\'c zadania}
 \noindent\normalsize
-Święty Mikołaj wyrusza w swoją świąteczną podróż po Laponii, by dostarczyć prezenty dzieciom. Jego trasa prowadzi przez siatkę \( n \times m \), gdzie każda komórka reprezentuje komin o określonej trudności \( g_{i,j} \).
+Święty Mikołaj wyrusza w swoją świąteczną podróż po Laponii, by dostarczyć prezenty dzieciom. Jego trasa prowadzi przez siatkę \( n \times m \), gdzie każda komórka reprezentuje komin o określonej wysokości \( g_{i,j} \).
 
 Mikołaj musi dotrzeć z pola \((1, 1)\) (start) na pole \((n, m)\) (meta), wybierając odpowiednią trasę i odpowiednio zarządzając swoją energią. W trakcie podróży może natrafić na różne sytuacje: jeśli przemieszcza się na pole o większej wysokości, musi użyć liny, której maksymalna długość \( M \) ogranicza różnicę wysokości, jaką może pokonać. Za każdy taki manewr zużywa 1 jednostkę energii. Gdy Mikołaj trafi na pole niższe lub równe wysokości, nie traci energii. Napotkane pola z magicznym napojem przywracają jego energię do pełnej wartości \( k \), natomiast pola oznaczone wartością \( -1 \) są niedostępne i nie może przez nie przejść. Mikołaj może poruszać się jedynie w prawo lub w dół.
 
