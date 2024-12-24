@@ -19,9 +19,10 @@
 % Wstaw limit pamięci
 \newcommand{\memorylimit}{512 MB}
 % Wstaw dane przykładowe wejścia
-\newcommand{\exampleinput}{\\4 4 4
+\newcommand{\exampleinput}{\\5 4 4
 \\1 2 0 4
 \\2 -1 -1 5
+\\4 2 6 9
 \\3 2 0 6
 \\4 5 6 7}
 % Wstaw dane przykładowe wyjścia
@@ -67,7 +68,7 @@ Mikołaj musi dotrzeć z pola \((1, 1)\) (start) na pole \((n, m)\) (meta), wybi
 Jeżeli nie da się dotrzeć do mety, należy wypisać słowo \texttt{NIE}.
 
 \section*{Wejście}
-Na wejściu znajdują się trzy liczby całkowite \( n, m, k \) ($1 \leq n, m \leq 800$, \( 1 \leq k \leq 10^4 \)), oznaczające wymiary planszy oraz maksymalną liczbę jednostek energii. Następnie podana jest siatka \( g_{i,j} \) o wymiarach \( n \times m \). Wartości \( g_{i,j} \) mogą być dodatnie (wysokość komina), równe 0 (pole zawierające magiczny napój) lub równe \( -1 \) (pole niedostępne).
+Na wejściu znajdują się trzy liczby całkowite \( n, m, k \) ($1 \leq n, m \leq 800$, \( 1 \leq k \leq 10^4 \)), oznaczające wymiary planszy oraz maksymalną liczbę jednostek energii. Zakładamy, że startowa energia Mikołaja również jest równa $k$. Następnie podana jest siatka \( g_{i,j} \) ($-1 \leq g_{i,j} \leq 10^4$) o wymiarach \( n \times m \). Wartości \( g_{i,j} \) mogą być dodatnie (wysokość komina), równe 0 (pole znajdujace sie na wysokosci 0 oraz zawierające magiczny napój) lub równe \( -1 \) (pole niedostępne).
 
 \section*{Wyjście}
 Na wyjściu należy wypisać jedną liczbę całkowitą — minimalną długość liny \( M \), która pozwala Mikołajowi dotrzeć z \( (1, 1) \) na \( (n, m) \). Jeśli nie da się dotrzeć do mety, należy wypisać słowo \texttt{NIE}.
