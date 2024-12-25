@@ -16,10 +16,12 @@ ll sumuj(int H) {
     return suma;
 }
 
+int maxh = 0;
+
 void f() {
-    sort(h.begin(), h.end());
+    //sort(h.begin(), h.end());
     
-    int l = 0, r = h[n-1];
+    int l = 0, r = maxh;
     int s;
     ans = r;
     while (l <= r) {
@@ -44,6 +46,7 @@ int32_t main() {
     
     for (int i = 0; i < n; i++) {
         int x; cin >> x;
+        maxh = max(maxh, x);
         h.pb(x);
     }
     
